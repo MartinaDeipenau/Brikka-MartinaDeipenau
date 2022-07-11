@@ -1,0 +1,250 @@
+@import "../base/variables";
+
+/*-----MAIN-----*/
+h1 {
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: $color-letra;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $color-letra;
+    width: 100%;
+    padding: 20px;
+}
+
+/*Index*/
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
+.main {
+    background-color: $color-main;
+    grid-area: main;
+}
+
+.hero {
+    @include imagen(100%, calc(100vh - 150px));
+    color: $color-negro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/disfruta-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5px;
+
+    h1 {
+        color: $color-blanco;
+    }
+
+
+}
+
+/*Productos*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+.productos {
+    div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 10px;
+        flex-wrap: wrap;
+
+        article {
+            @include sizes(300px, 350px);
+            border: 1px;
+            box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
+            background-color: $color-blanco;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                padding: 1px;
+            }
+
+            h3 {
+                color: $color-letra;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $color-letra;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+}
+
+/*Novedades*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+h2 {
+    text-align: center;
+    color: $color-letra;
+}
+
+.novedades> {
+    div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+
+        article {
+            @include sizes(300px, 350px);
+            border: 1px;
+            box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            margin-top: 10px;
+
+            img {
+                width: 300px;
+                height: 300px;
+                padding: 1px;
+            }
+
+            h3 {
+                color: $color-letra;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+/*Contacto*/
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
+.contacto {
+    background-color: $color-blanco;
+    justify-content: space-around;
+    text-align: center;
+
+    article {
+        form {
+            input {
+                width: 50%;
+                height: 50px;
+                padding: 10px;
+                border-radius: 15px;
+                margin-top: 7px;
+                box-shadow: 10px 10px 30px -6px #ddbea9;
+            }
+        }
+    }
+}
+
+.imagen {
+    @include imagen(100%, $calc: calc(60vh - 110px));
+    color: $color-negro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: $color-blanco;
+
+    }
+}
+
+/*EXTENDS*/
+.boton {
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $color-boton;
+    padding: 5px;
+    color: $color-letra;
+
+    &:hover {
+        color: $color-letra;
+        background-color: $color-fondoboton;
+    }
+}
+
+.boton-hero {
+    @extend .boton;
+    background-color: $color-fondoboton;
+
+    &:hover {
+        background-color: $color-boton;
+    }
+}
+
+/*MIXINS*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
+/*EACH*/
+$color: (
+    estilo1: #bcd379,
+    estilo2: #c2242d,
+);
+
+/*EACH con mapas*/
+@each $nombre,
+$valor in $color {
+    .boton-#{$nombre} {
+        background-color: $valor;
+        @extend .boton;
+        text-decoration: none;
+        border-radius: 7px;
+        padding: 3px;
+    }
+
+}
