@@ -31,7 +31,7 @@ h2 {
 }
 
 .hero {
-    @include imagen(100%, calc(70vh - 150px));
+    @include imagen(100%, calc(70vh - 80px));
     color: $color-negro;
     display: flex;
     flex-direction: column;
@@ -156,27 +156,8 @@ h2 {
     height: $calc;
 }
 
-.contacto {
-    background-color: $color-blanco;
-    justify-content: space-around;
-    text-align: center;
-
-    article {
-        form {
-            input {
-                width: 50%;
-                height: 50px;
-                padding: 10px;
-                border-radius: 15px;
-                margin-top: 7px;
-                box-shadow: 10px 10px 30px -6px #ddbea9;
-            }
-        }
-    }
-}
-
 .imagen {
-    @include imagen(100%, $calc: calc(60vh - 120px));
+    @include imagen(100%, $calc: calc(65vh - 90px));
     color: $color-negro;
     display: flex;
     flex-direction: column;
@@ -187,12 +168,30 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 
-    h2 {
+    p {
         font-size: 30px;
         font-weight: bold;
         text-align: center;
         color: $color-blanco;
+    }
+}
 
+.contacto {
+    background-color: $color-blanco;
+    justify-content: space-around;
+    text-align: center;
+
+    article {
+        form {
+            input {
+                width: 60%;
+                height: 50px;
+                padding: 10px;
+                border-radius: 15px;
+                margin-top: 7px;
+                box-shadow: 10px 10px 30px -6px #ddbea9;
+            }
+        }
     }
 }
 
@@ -246,5 +245,4 @@ $valor in $color {
         border-radius: 7px;
         padding: 3px;
     }
-
 }

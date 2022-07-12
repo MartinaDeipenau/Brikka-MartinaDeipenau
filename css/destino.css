@@ -65,7 +65,7 @@ h2 {
 
 .hero {
   width: 100%;
-  height: calc(70vh - 150px);
+  height: calc(70vh - 80px);
   color: black;
   display: flex;
   flex-direction: column;
@@ -160,23 +160,9 @@ h2 {
 }
 
 /*Contacto*/
-.contacto {
-  background-color: white;
-  justify-content: space-around;
-  text-align: center;
-}
-.contacto article form input {
-  width: 50%;
-  height: 50px;
-  padding: 10px;
-  border-radius: 15px;
-  margin-top: 7px;
-  box-shadow: 10px 10px 30px -6px #ddbea9;
-}
-
 .imagen {
   width: 100%;
-  height: calc(60vh - 120px);
+  height: calc(65vh - 90px);
   color: black;
   display: flex;
   flex-direction: column;
@@ -187,11 +173,25 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.imagen h2 {
+.imagen p {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   color: white;
+}
+
+.contacto {
+  background-color: white;
+  justify-content: space-around;
+  text-align: center;
+}
+.contacto article form input {
+  width: 60%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 15px;
+  margin-top: 7px;
+  box-shadow: 10px 10px 30px -6px #ddbea9;
 }
 
 /*EXTENDS*/
@@ -309,7 +309,7 @@ h2 {
   h1 {
     font-size: 30px;
   }
-  h2 {
+  p {
     font-size: 20px;
   }
   .productos h2 {
