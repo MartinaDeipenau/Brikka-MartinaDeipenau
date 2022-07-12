@@ -65,7 +65,7 @@ h2 {
 
 .hero {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(70vh - 150px);
   color: black;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@ h2 {
 
 .imagen {
   width: 100%;
-  height: calc(60vh - 110px);
+  height: calc(60vh - 120px);
   color: black;
   display: flex;
   flex-direction: column;
