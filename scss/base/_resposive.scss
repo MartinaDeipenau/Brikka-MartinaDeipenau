@@ -27,7 +27,7 @@
         font-size: 20px;
     }
 
-    .productos {
+    .productos, .contacto {
         h2 {
             font-size: 30px;
         }
@@ -36,6 +36,7 @@
     .comentario {
         font-size: 30px;
     }
+    
 
     .footer {
         div {
@@ -96,7 +97,11 @@
     .comentario {
         font-size: 20px;
     }
-
+    .contacto {
+        h2 {
+            font-size: 30px;
+        }
+    }
 
     .footer {
         div {

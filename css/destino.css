@@ -173,10 +173,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.imagen p {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+.imagen h1 {
   color: white;
 }
 
@@ -185,12 +182,20 @@ h2 {
   justify-content: space-around;
   text-align: center;
 }
+.contacto h2 {
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 50px;
+}
 .contacto article form input {
-  width: 60%;
+  width: 70%;
   height: 50px;
   padding: 10px;
   border-radius: 15px;
-  margin-top: 7px;
+  margin-top: 20px;
   box-shadow: 10px 10px 30px -6px #ddbea9;
 }
 
@@ -221,14 +226,14 @@ h2 {
   background-color: #bcd379;
   text-decoration: none;
   border-radius: 7px;
-  padding: 3px;
+  padding: 5px;
 }
 
 .boton-estilo2 {
   background-color: #c2242d;
   text-decoration: none;
   border-radius: 7px;
-  padding: 3px;
+  padding: 5px;
 }
 
 /*-----FOOTER-----*/
@@ -312,7 +317,7 @@ h2 {
   p {
     font-size: 20px;
   }
-  .productos h2 {
+  .productos h2, .contacto h2 {
     font-size: 30px;
   }
   .comentario {
@@ -348,6 +353,9 @@ h2 {
   }
   .comentario {
     font-size: 20px;
+  }
+  .contacto h2 {
+    font-size: 30px;
   }
   .footer div nav ul li a {
     font-size: 15px;
